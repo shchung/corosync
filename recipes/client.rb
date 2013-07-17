@@ -87,7 +87,7 @@ end
 #             replace 192.168.0.0 below
 # bindnetaddr = node.ipaddress[0..node.ipaddress.rindex('.')]+'0'
 
-bindnetaddr = node['osops_networks']['management'].sub! /\/[0-9]+$/,''
+bindnetaddr = "10.1.1.0" 
 
 template "/etc/corosync/corosync.conf" do
   source "corosync.conf.erb"
